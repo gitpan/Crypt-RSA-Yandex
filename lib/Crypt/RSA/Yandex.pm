@@ -8,7 +8,7 @@ use base 'Exporter';
 our @EXPORT_OK = qw(ya_encrypt);
 our @EXPORT = ( );
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 require XSLoader;
 XSLoader::load(__PACKAGE__, $VERSION);
@@ -55,7 +55,7 @@ None by default.
 
 =over 4
 
-=item $crypter = Crypt::YamRSA->new
+=item $crypter = Crypt::RSA::Yandex->new()
 
 =item $self->import_public_key($key)
 
