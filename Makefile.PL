@@ -10,6 +10,7 @@ WriteMakefile(
 	AUTHOR            => 'Vladimir Timofeev <vovkasm@gmail.com>',
 	AUTHOR            => 'Mons Anderson <mons@cpan.org>',
 	LIBS              => ['-lstdc++'],
+	META_ADD          => { license => 'perl' },
 	#DEFINE            => '-D__DEBUG__',
 	DEFINE            => '',
 	INC               => '-I.',

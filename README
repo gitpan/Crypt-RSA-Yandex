@@ -1,40 +1,38 @@
-Crypt-YamRSA version 0.01
-=========================
+NAME
+    Crypt::RSA::Yandex - Perl binding to modified RSA library (yamrsa) for
+    encrypting Yandex auth token
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
+SYNOPSIS
+        use Crypt::RSA::Yandex;
 
-A README file is required for CPAN modules since CPAN extracts the
-README file from a module distribution so that people browsing the
-archive can use it get an idea of the modules uses. It is usually a
-good idea to provide version information here so that people can
-decide whether fixes for the module are worth downloading.
+        my $crypter = Crypt::RSA::Yandex->new;
+        $crypter->import_public_key($pubkey);
 
-INSTALLATION
+        my $encrypted = $crypter->encrypt($text);
+    
+        # or 
+        use Crypt::RSA::Yandex 'ya_encrypt';
+        my $encrypted = ya_encrypt($pubkey,$text);
 
-To install this module type the following:
+DESCRIPTION
+  FUNCTIONAL INTERFACE
+    None by default.
 
-   perl Makefile.PL
-   make
-   make test
-   make install
+    $encrypted_text = ya_encrypt($key, $text)
 
-DEPENDENCIES
+  OOP INTERFACE
+    $crypter = Crypt::RSA::Yandex->new()
+    $self->import_public_key($key)
+    $encrypted_text = $self->encrypt($text)
 
-This module requires these other modules and libraries:
+SEE ALSO
+    http://api.yandex.ru/fotki/doc/overview/authorization-token.xml
 
-  blah blah blah
+AUTHOR
+    Vladimir Timofeev, <vovkasm@gmail.com>
 
-COPYRIGHT AND LICENCE
+    Mons Anderson, <mons@cpan.org>
 
-Put the correct copyright and licence information here.
-
-Copyright (C) 2010 by Vladimir Timofeev
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.10.1 or,
-at your option, any later version of Perl 5 you may have available.
-
+COPYRIGHT AND LICENSE
+    Copyright (c) 2010 by Rambler
 

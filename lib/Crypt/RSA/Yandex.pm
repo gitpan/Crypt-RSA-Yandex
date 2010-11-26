@@ -8,7 +8,7 @@ use base 'Exporter';
 our @EXPORT_OK = qw(ya_encrypt);
 our @EXPORT = ( );
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 require XSLoader;
 XSLoader::load(__PACKAGE__, $VERSION);

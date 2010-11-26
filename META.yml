@@ -1,10 +1,10 @@
 --- #YAML:1.0
 name:               Crypt-RSA-Yandex
-version:            0.05
+version:            0.06
 abstract:           Perl binding to modified RSA library (yamrsa) for encrypting Yandex auth token
 author:
     - Mons Anderson <mons@cpan.org>
-license:            unknown
+license:            perl
 distribution_type:  module
 configure_requires:
     ExtUtils::MakeMaker:  0
